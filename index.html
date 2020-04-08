@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fake User List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--navigation bar-->
+  <ul class="nav justify-content-center bg-danger" id="nav-bar">
+    <li class="nav-item align-self-center">
+      <a class="nav-link active text-light" id="show-all" href="#">ALL</a>
+    </li>
+    <li class="nav-item align-self-center">
+      <a class="nav-link text-light" href="#" id="show-male">Male</a>
+    </li>
+    <li class="nav-item align-self-center">
+      <a class="nav-link text-light" href="#" id="show-female">Female</a>
+    </li>
+    <li class="nav-item align-self-center text-light">
+      <a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="true">Favorite</a>
+    </li>
+  </ul>
+
+  <div class="container mt-5">
+    <!--search bar-->
+    <div class="row" id="search-bar">
+      <form id="search" class="form-inline">
+        <label class="sr-only" for="inlineFormInputName2">Name</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="search-input" placeholder="search name ...">
+        <button type="submit" class="btn btn-danger mb-2">Search</button>
+      </form>
+    </div>
+
+    <!--data Panel-->
+    <div class="row" id="data-panel">
+      <!--print fake user list here-->
+    </div>
+  </div>
+
+  <!--Modal-->
+  <div class="modal fade" id="show-user-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="show-user-name">User name</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body" id="show-user-body">
+          <div class="row">
+            <div class="col-sm-4" id="show-user-avatar">
+            </div>
+            <div class="col-sm-4">
+              <p><em id="show-user-age"></em></p>
+              <p><em id="show-user-region"><em></p>
+              <p><em id="show-user-birthday"><em></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="add-favorite" id="add-to-favorite"></div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--分頁-->
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center" id="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#">1</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
